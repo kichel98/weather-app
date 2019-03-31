@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+header {
+    background: rgb(32, 19, 30);
+    min-width: 57px;
+}
+
+main {
+    display: grid;
+    grid-template: 1fr 2fr / 1fr 3fr;
+    width: 100%;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 3;
+    background-image: linear-gradient(rgba(192, 109, 53, 0.671),rgba(201, 45, 25, 0.904)),url(img/miasto.jpg);
+    background-position: right top;
+    filter: grayscale(45%);
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.left_container {
+    grid-area: 2 / 1 / 3 / 2;
+    background-image: linear-gradient(rgba(133, 32, 41, 0.836),rgba(124, 45, 111, 0.658)),url(img/wieza.jpg);
+    background-position: 45%;
+    filter: grayscale(30%);
+}
+
+.right_container {
+    background-image: linear-gradient(45deg, rgba(27, 20, 44, 0.959),rgba(75, 69, 129, 0.658)),url(img/krople.jpg);
+    filter: grayscale(50%);
+    grid-area: 2 / 2 / 3 / 3;
+}
