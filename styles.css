@@ -42,3 +42,29 @@ main {
     filter: grayscale(50%);
     grid-area: 2 / 2 / 3 / 3;
 }
+
+.right_header {
+    height: 20%;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.right_main {
+  display: flex;
+  justify-content: space-around;
+  height: 60%;
+  margin-top: 1%;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 2%;
+    right:2%;
+}
+
+.paragraph {
+    max-width: 30%;
+    text-align: justify;
+    text-align-last: center;
+}
