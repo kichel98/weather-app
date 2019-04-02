@@ -44,9 +44,6 @@ function showMinTemperature(data, query) {
     // document.querySelector(query).innerHTML = Math.round(data.main.temp_min)
     console.log(Math.round(data.main.temp_min))
 }
-function showTime(data, query) {
-    // document.querySelector(query).innerHTML = Math.round
-}
 
 // na razie hard-coded, później miasto będzie się zmieniać,
 // a funkcje show będą przyjmować query do konkretnych miejsc w HTML
