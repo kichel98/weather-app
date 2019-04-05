@@ -1,3 +1,15 @@
+
+var header = document.getElementById("icon_bar");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
+
+
 // Ta funkcja zawsze zwraca Promise.
 // Żeby z niej korzystać, musisz użyć funkcji then() na tym, co zwróci,
 // w parametrze podając funkcję, która ma się wykonać
@@ -55,3 +67,5 @@ getCurrentWeatherByCityName('London')
         showMaxTemperature(data)
         showMinTemperature(data)
     })
+
+
