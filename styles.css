@@ -10,16 +10,72 @@ body {
     display: flex;
 }
 
+
 header {
+    position: relative;
     background: rgb(32, 19, 30);
     min-width: 57px;
+    /* width: 100px; */
+    background-color: #555;
+
 }
 
+.icon_bar a {
+    display: block;
+    text-align: center;
+    /* width: 12.5%; */
+    color: white;
+    font-size: 30px;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.icon_bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: rgb(255, 218, 51);
+}
+
+.bar_container {
+
+}
+
+/* nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  
+    margin-top: 25vh;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    background: #fff;
+    text-align: center;
+}
+
+nav ul li {
+    height: 10vh;
+    list-style: none;
+    display: block;
+    border-bottom: 10px solid;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 100px 0px;
+}
+.icon {
+    background-color: red;
+}
+
+*/
 main {
     display: grid;
     grid-template: 1fr 2fr / 1fr 3fr;
     width: 100%;
-}
+} 
 
 .header {
     grid-area: 1 / 1 / 2 / 3;
