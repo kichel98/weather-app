@@ -38,39 +38,7 @@ header {
     background-color: rgb(255, 218, 51);
 }
 
-.bar_container {
 
-}
-
-/* nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-  
-    margin-top: 25vh;
-    box-shadow: 0 10px 30px rgba(0,0,0,.3);
-    background: #fff;
-    text-align: center;
-}
-
-nav ul li {
-    height: 10vh;
-    list-style: none;
-    display: block;
-    border-bottom: 10px solid;
-}
-
-nav ul li a{
-    text-decoration: none;
-    padding: 100px 0px;
-}
-.icon {
-    background-color: red;
-}
-
-*/
 main {
     display: grid;
     grid-template: 1fr 2fr / 1fr 3fr;
@@ -91,6 +59,23 @@ main {
     background-image: linear-gradient(rgba(133, 32, 41, 0.836),rgba(124, 45, 111, 0.658)),url(img/wieza.jpg);
     background-position: 45%;
     filter: grayscale(30%);
+}
+
+.forecast {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* margin-bottom: 2%; */
+    height: 50%;
+    box-sizing: border-box;
+}
+
+.actual_weather {
+    box-sizing: border-box;
+    height: 50%;
+    /* margin-top: 10%; */
+    margin-right: 15%;
+    margin-left: 15%;
+    /* margin-bottom: 10%/ */
 }
 
 .right_container {
