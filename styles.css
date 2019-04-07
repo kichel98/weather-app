@@ -46,8 +46,8 @@ main {
 } 
 
 .header {
-    /* grid-area: 1 / 1 / 2 / 3; */
     grid-area: 1 / 1 / 2 / 3;
+    filter: contrast(.68) brightness(.9) saturate(4);
     background-image: linear-gradient(rgba(192, 109, 53, 0.671),rgba(201, 45, 25, 0.904)),url(img/miasto.jpg);
     background-position: right top;
     filter: grayscale(45%);
@@ -58,9 +58,18 @@ main {
 .left_container {
     grid-area: 2 / 1 / 3 / 2;
     background-image: linear-gradient(rgba(133, 32, 41, 0.836),rgba(124, 45, 111, 0.658)),url(img/wieza.jpg);
+    filter: contrast(120%);
+    position: relative;
     background-size: cover;
     background-position: 45%;
-    filter: grayscale(30%);
+    /* filter: grayscale(1%); */
+}
+
+#left_container_overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .left-container-header {
@@ -92,6 +101,8 @@ main {
 .clock  {
     font-size: 3vh;
     margin-bottom: 4%;
+    font-family: 'PT Sans',
+    sans-serif;
 }
 
 #today_is {
@@ -102,15 +113,22 @@ main {
     opacity: 0.5;
 }
 
+#today_weather_temperature {
+    font-size: 7vh;
+    text-shadow:0 2px 20px rgba(0, 0, 0, 0.6);
+    opacity: 0.7;
+}
+
 #today_is_day_of_week {
     color: palevioletred;
     font-size: 3vh;
     font-family: 'Raleway',
         sans-serif;
+    text-shadow:0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 .forecast {
-    margin-top: 15%;
+    margin: 5%;
     height: 40%;
     box-sizing: border-box;
     display: flex;
@@ -122,31 +140,28 @@ main {
     font-family: 'Raleway',
     sans-serif;
 }
-/*
-.forecast_day {
-    margin: 0.5vh 1vh;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 20px;
-}
-*/
 
 .forecast_day {
     display: grid;
+    font-size: 2.5vh;
     grid-gap: 10px;
-    grid-template-columns: 1.6fr 0.5fr 1fr;
+    grid-template-columns: 1fr 0.8fr 0.7fr;
 }
 
 .next_day {
     grid-area: auto;
     justify-self: end;
+    color: rgb(255, 162, 201);
+    text-shadow:0 2px 2px rgba(0, 0, 0, 0.6);
 }
 .next_day_temp {
     grid-area: auto;
     justify-self: end;
+    opacity: 0.6;
 }
 
 .next_day_icon {
+    opacity: 0.7;
     grid-area: auto;
 }
 
@@ -154,6 +169,12 @@ main {
     background-image: linear-gradient(45deg, rgba(27, 20, 44, 0.959),rgba(75, 69, 129, 0.658)),url(img/krople.jpg);
     filter: grayscale(50%);
     grid-area: 2 / 2 / 3 / 3;
+}
+
+.fa-angle-left {
+    grid-area: 1 / 2;
+    opacity: 0.9;
+    color: yellow;
 }
 
 .right_header {

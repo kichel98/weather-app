@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <title>Weather WebApp</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
                 <a href="#" class="btn"><i class=" fa fa-user-circle"></i></a>
                 <a href="#" class="btn"><i class="fa fa-map-marker"></i></a>
                 <a href="#" class="btn"><i class="fa fa-bars"></i></a>
-                <a href="#" class="btn"> <i class="fa fa-cloud"></i></a>
+                <a href="#" class="btn"><i class="fa fa-cloud"></i></a>
                 <a href="#" class="btn"><i class="fa fa-cog"></i></a>
             </div>
         </div>
@@ -26,6 +28,7 @@
     <main>
         <article class="header"></article>
         <article class="left_container">
+            <div id="left_container_overlay"></div>
             <div class="left-container-header">
                 <div id="actual_city" class="actual_city"></div>
                 <div id="myClock" class="clock"></div>
@@ -37,24 +40,25 @@
             <div class="forecast">
                 <div class="forecast_day">
                     <div class="next_day"></div>
-                    <div class="next_day_temp">25</div>
-                    <div class="next_day_icon">icon</div>
+                    <div class="next_day_temp"></div>
+                    <div class="next_day_icon"><img class="forecast_weather_icon"></div>
                 </div>
                 <div class="forecast_day">
                     <div class="next_day"></div>
-                    <div class="next_day_temp">25</div>
-                    <div class="next_day_icon">icon</div>
+                    <div class="next_day_temp"></div>
+                    <div class="next_day_icon"><img class="forecast_weather_icon"></div>
                 </div>
                 <div class="forecast_day">
                     <div class="next_day"></div>
-                    <div class="next_day_temp">5</div>
-                    <div class="next_day_icon">icon</div>
+                    <div class="next_day_temp"></div>
+                    <div class="next_day_icon"><img class="forecast_weather_icon"></div>
                 </div>
                 <div class="forecast_day">
                     <div class="next_day"></div>
-                    <div class="next_day_temp">25</div>
-                    <div class="next_day_icon">icon</div>
+                    <div class="next_day_temp"></div>
+                    <div class="next_day_icon"><img class="forecast_weather_icon"></div>
                 </div>
+                <div class="forecast_day"><div class="fas fa-angle-left fa-lg"></div></div>
             </div>
         </article>
         <article class="right_container">

@@ -96,12 +96,20 @@ getCurrentWeatherByCityName('London')
          var day_or_night = ' pm';
      }
 
+     if(s<10){
+         s = '0'+s;
+     }
+     if (m < 10) {
+         m = '0' + m;
+     }
+     if (hour < 10) {
+         hour = '0' + hour;
+     }
      var time = hour + ":" + m + ":" + s + day_or_night;
      document.getElementById("myClock").innerText = time;
      document.getElementById("myClock").innerContent = time;
 
 var objToday = new Date(),
-    
 
     dayOfMonth = today + (objToday.getDate() < 10) ? '0' + objToday.getDate() : objToday.getDate(),
     months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
@@ -133,12 +141,16 @@ function showForecastTemperature(data, query) {
     // document.querySelector(query).innerHTML = Math.round(data.main.temp)
     days_min = new Array(5);
     days_max = new Array(5);
+    days_icons = new Array(5);
     
     for(let i = 1; i<5; i++){
         days_min[i] = data.list[i].main.temp_min;
         days_max[i] = data.list[i].main.temp_max;
+        days_icons[i] = data.list[i+3].weather[0].icon;
+
         for (let j = 0; j < 8; j++){
-            console.log('min temp z dnia ', i, " ", data.list[i+i*j].main.temp_max);
+           // console.log('min temp z dnia ', i, " ", data.list[i+i*j].main.temp_max);
+           
             if (data.list[i + i * j].main.temp_min < days_min[i]){
                 days_min[i] = data.list[i + i * j].main.temp_min;
             }
@@ -147,11 +159,19 @@ function showForecastTemperature(data, query) {
             }
         }
         document.getElementsByClassName("next_day")[i-1].innerText = setDay(i);
+        document.getElementsByClassName("next_day_temp")[i - 1].innerText = Math.round(days_min[i]) + '°c  ' + Math.round(days_max[i]) + '°c';
         //+ ' ' + Math.round(days_min[i]) + '°c  ' + Math.round(days_max[i]) + '°c'
+    }
+    for (let i = 1; i < 5; i++) {
+        actual_icon = document.getElementsByClassName('forecast_weather_icon')[i-1];
+        actual_icon.src = `http://openweathermap.org/img/w/${days_icons[i]}.png`
     }
     console.log(days_min);
     console.log(days_max);
+    console.log(days_icons);
+    console.log(data);
 }
+
 
 getForecastWeatherByCityName('London')
     .then(data => {
