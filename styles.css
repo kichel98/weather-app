@@ -46,6 +46,7 @@ main {
 } 
 
 .header {
+    /* grid-area: 1 / 1 / 2 / 3; */
     grid-area: 1 / 1 / 2 / 3;
     background-image: linear-gradient(rgba(192, 109, 53, 0.671),rgba(201, 45, 25, 0.904)),url(img/miasto.jpg);
     background-position: right top;
@@ -109,13 +110,45 @@ main {
 }
 
 .forecast {
-    margin-left: 15%;
-    margin-right: 15%;
-    /* margin-bottom: 2%; */
+    margin-top: 15%;
     height: 40%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    color: white;
+    font-size: 3vh;
+    font-family: 'Raleway',
+    sans-serif;
+}
+/*
+.forecast_day {
+    margin: 0.5vh 1vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+*/
+
+.forecast_day {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1.6fr 0.5fr 1fr;
 }
 
+.next_day {
+    grid-area: auto;
+    justify-self: end;
+}
+.next_day_temp {
+    grid-area: auto;
+    justify-self: end;
+}
+
+.next_day_icon {
+    grid-area: auto;
+}
 
 .right_container {
     background-image: linear-gradient(45deg, rgba(27, 20, 44, 0.959),rgba(75, 69, 129, 0.658)),url(img/krople.jpg);
