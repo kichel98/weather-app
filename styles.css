@@ -100,12 +100,54 @@ main {
 }
 
 .right_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     height: 18%;
     margin-top: 2%;
     margin-right: 4%;
     margin-left: 4%;
-    margin-bottom: 2%
+    margin-bottom: 2%;
+    color: white;
+    font-family: 'Raleway', sans-serif;
 }
+
+.right_header h2 {
+    font-size: 2em;
+    display: inline;
+    color: white;
+}
+
+.icon-right-open {
+    font-size: 2em;
+    color: rgb(255, 218, 51);
+}
+
+.right_header .slider {
+    -webkit-appearance: none;
+    height: 0.35em;
+    border-radius: 1px;
+    /* background: rgb(202, 23, 93) */
+    background: linear-gradient(to right, rgb(255, 3, 99), rgb(252, 245, 8))
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;   
+    border-radius: 50%;
+    background: white;
+}
+/* 
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+} */
+
 
 .graph {
     margin-left: 4%;
