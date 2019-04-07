@@ -95,6 +95,7 @@ main {
 
 .right_container {
     background-image: linear-gradient(45deg, rgba(27, 20, 44, 0.959),rgba(75, 69, 129, 0.658)),url(img/krople.jpg);
+    /* background-size: cover; */
     filter: grayscale(50%);
     grid-area: 2 / 2 / 3 / 3;
 }
@@ -102,7 +103,7 @@ main {
 .right_header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    /* align-items: center; */
     height: 18%;
     margin-top: 2%;
     margin-right: 4%;
@@ -125,13 +126,14 @@ main {
 
 .right_header .slider {
     -webkit-appearance: none;
+    display: inline-block;
     height: 0.35em;
     border-radius: 1px;
-    /* background: rgb(202, 23, 93) */
-    background: linear-gradient(to right, rgb(255, 3, 99), rgb(252, 245, 8))
+    outline: none;
+    background: linear-gradient(to right, rgb(255, 3, 99), rgb(252, 245, 8));
 }
 
-.slider::-webkit-slider-thumb {
+.right_header .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 1.2em;
@@ -139,15 +141,52 @@ main {
     border-radius: 50%;
     background: white;
 }
-/* 
-.slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4CAF50;
-    cursor: pointer;
-} */
 
+.right_header .slider::-moz-range-thumb {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    background: white;
+}
+
+.right_header .slider::-moz-range-progress {
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 3, 99), rgb(252, 245, 8));
+}
+
+.right_header .slider::-moz-range-track {
+    height: 100%;
+    background: rgb(119, 121, 50);
+    /* background: blue; */
+    /* background: linear-gradient(to right, rgba(255, 3, 99, 0.6), rgba(252, 245, 8, 0.6)); */
+
+}
+
+.start-right-header {
+    display: flex;
+    align-items: center;
+}
+
+.end-right-header {
+    display: flex;
+    align-items: center;
+}
+
+.end-right-header > span {
+    font-size: 2em;
+    margin-left: 2em;
+    margin-right: 4em;
+}
+.letter {
+    color: rgb(180, 179, 179);
+}
+
+#left-border {
+    display: inline-block;
+    border-left: 1.5px solid rgb(180, 179, 179);
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+}
 
 .graph {
     margin-left: 4%;
