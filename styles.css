@@ -119,16 +119,96 @@ main {
 
 .right_container {
     background-image: linear-gradient(45deg, rgba(27, 20, 44, 0.959),rgba(75, 69, 129, 0.658)),url(img/krople.jpg);
+    /* background-size: cover; */
     filter: grayscale(50%);
     grid-area: 2 / 2 / 3 / 3;
 }
 
 .right_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 18%;
     margin-top: 2%;
     margin-right: 4%;
     margin-left: 4%;
-    margin-bottom: 2%
+    margin-bottom: 2%;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.right_header h2 {
+    font-size: 2em;
+    display: inline;
+    color: white;
+}
+
+.icon-right-open {
+    font-size: 2em;
+    color: rgb(255, 218, 51);
+}
+
+.right_header .slider {
+    -webkit-appearance: none;
+    display: inline-block;
+    height: 0.35em;
+    border-radius: 1px;
+    outline: none;
+    background: linear-gradient(to right, rgb(255, 3, 99), rgb(252, 245, 8));
+}
+
+.right_header .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;   
+    border-radius: 50%;
+    background: white;
+}
+
+.right_header .slider::-moz-range-thumb {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    background: white;
+}
+
+.right_header .slider::-moz-range-progress {
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 3, 99), rgb(252, 245, 8));
+}
+
+.right_header .slider::-moz-range-track {
+    height: 100%;
+    background: rgb(119, 121, 50);
+    /* background: linear-gradient(to right, rgba(255, 3, 99, 0.6), rgba(252, 245, 8, 0.6)); */
+
+}
+
+.start-right-header {
+    display: flex;
+    align-items: center;
+}
+
+.end-right-header {
+    display: flex;
+    align-items: center;
+}
+
+.end-right-header > span {
+    font-size: 2em;
+    margin-left: 2em;
+    margin-right: 4em;
+}
+.letter {
+    color: rgb(180, 179, 179);
+}
+
+#left-border {
+    display: inline-block;
+    border-left: 1.5px solid rgb(180, 179, 179);
+    margin-left: 0.5em;
+    padding-left: 0.5em;
 }
 
 .graph {
