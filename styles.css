@@ -103,7 +103,7 @@ main {
 .right_header {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     height: 18%;
     margin-top: 2%;
     margin-right: 4%;
@@ -157,7 +157,6 @@ main {
 .right_header .slider::-moz-range-track {
     height: 100%;
     background: rgb(119, 121, 50);
-    /* background: blue; */
     /* background: linear-gradient(to right, rgba(255, 3, 99, 0.6), rgba(252, 245, 8, 0.6)); */
 
 }
