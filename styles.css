@@ -38,39 +38,7 @@ header {
     background-color: rgb(255, 218, 51);
 }
 
-.bar_container {
 
-}
-
-/* nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-  
-    margin-top: 25vh;
-    box-shadow: 0 10px 30px rgba(0,0,0,.3);
-    background: #fff;
-    text-align: center;
-}
-
-nav ul li {
-    height: 10vh;
-    list-style: none;
-    display: block;
-    border-bottom: 10px solid;
-}
-
-nav ul li a{
-    text-decoration: none;
-    padding: 100px 0px;
-}
-.icon {
-    background-color: red;
-}
-
-*/
 main {
     display: grid;
     grid-template: 1fr 2fr / 1fr 3fr;
@@ -89,9 +57,65 @@ main {
 .left_container {
     grid-area: 2 / 1 / 3 / 2;
     background-image: linear-gradient(rgba(133, 32, 41, 0.836),rgba(124, 45, 111, 0.658)),url(img/wieza.jpg);
+    background-size: cover;
     background-position: 45%;
     filter: grayscale(30%);
 }
+
+.left-container-header {
+    box-sizing: border-box;
+    height: 40%;
+    margin-top: 8%;
+    margin-right: 5%;
+    margin-left: 5%;
+    /* margin-bottom: 10%/ */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.left-container-header {
+  color: white;
+  font-size: 4vh;
+  font-family: 'Raleway',
+  sans-serif;
+  margin-bottom: 6%;
+}
+
+.actual_city {
+    margin-bottom: 4%;
+}
+.clock  {
+    font-size: 3vh;
+    margin-bottom: 4%;
+}
+
+#today_is {
+    margin-bottom: 2%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+#today_is_day_of_week {
+    color: palevioletred;
+    font-size: 3vh;
+    font-family: 'Raleway',
+        sans-serif;
+}
+
+.forecast {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* margin-bottom: 2%; */
+    height: 40%;
+    box-sizing: border-box;
+}
+
 
 .right_container {
     background-image: linear-gradient(45deg, rgba(27, 20, 44, 0.959),rgba(75, 69, 129, 0.658)),url(img/krople.jpg);
