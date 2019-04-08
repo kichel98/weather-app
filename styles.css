@@ -43,13 +43,14 @@ main {
     display: grid;
     grid-template: 1fr 2fr / 1fr 3fr;
     width: 100%;
-} 
+}
 
 .header {
     grid-area: 1 / 1 / 2 / 3;
     filter: contrast(.68) brightness(.9) saturate(4);
     background-image: linear-gradient(rgba(192, 109, 53, 0.671),rgba(201, 45, 25, 0.904)),url(img/miasto.jpg);
     background-position: right top;
+    background-size: cover;
     filter: grayscale(45%);
     display: grid;
     grid-template-rows: 2fr 1fr;
@@ -215,7 +216,7 @@ main {
     -webkit-appearance: none;
     appearance: none;
     width: 1.2em;
-    height: 1.2em;   
+    height: 1.2em;
     border-radius: 50%;
     background: white;
 }
@@ -318,4 +319,30 @@ p {
     position: absolute;
     right: 0;
     color: yellow;
+}
+
+.hexa, .hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.hexa {
+  width: 325px;
+  height: 230px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+  display: inline-block;
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
 }
