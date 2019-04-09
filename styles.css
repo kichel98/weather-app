@@ -295,27 +295,4 @@ p {
     position: absolute;
     right: 14%;
     bottom: 0;
-    color: yellow;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: 'Raleway', sans-serif;
-    opacity: 1;
-    }
-
-.listoficons {
-    height: 70%;
-    margin: 3%;
-}
-
-.searchregion {
-    height: 70%;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.icon-right {
-    position: absolute;
-    right: 0;
-    color: yellow;
 }
