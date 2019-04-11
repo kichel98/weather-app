@@ -167,7 +167,7 @@ main {
 
 .right_container {
     background-image: linear-gradient(45deg, rgba(27, 20, 44, 0.959),rgba(75, 69, 129, 0.658)),url(img/krople.jpg);
-    /* background-size: cover; */
+    background-size: cover;
     filter: grayscale(50%);
     grid-area: 2 / 2 / 3 / 3;
 }
@@ -244,15 +244,19 @@ main {
     align-items: center;
 }
 
+.start-right-header h2 {
+    font-weight: 400;
+}
+
 .end-right-header {
     display: flex;
     align-items: center;
+    /* flex-wrap: nowrap; */
 }
 
 .end-right-header > span {
     font-size: 2em;
     margin-left: 2em;
-    margin-right: 4em;
 }
 .letter {
     color: rgb(180, 179, 179);
@@ -264,7 +268,27 @@ main {
     margin-left: 0.5em;
     padding-left: 0.5em;
 }
+@media only screen and (max-width: 780px) {
+    .right_header {
+        flex-direction: column;
+    }
+}
 
+@media only screen and (max-width: 650px) {
+    .end-right-header {
+        flex-direction: column;
+    }
+
+    .end-right-header>span {
+        margin-top: 0.5em;
+        margin-left: 0;
+    }
+
+    .end-right-header input {
+        margin-top: 1.5em;
+        margin-left: 0;
+    }
+}
 .graph {
     margin-left: 4%;
     margin-right: 4%;
@@ -321,4 +345,68 @@ p {
 }
 .hex2 {
   transform: rotate(-60deg);
+}
+
+.searchregion {
+    display: flex;
+    align-items: center;
+    height: 70%;
+    margin-bottom: 2%;
+    margin: auto;
+
+}
+
+.searchregion h4 {
+    display: inline;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    margin: 0 1em;
+}
+
+.searchregion select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    height: 2em;
+    padding: 0 1em;
+    margin: 0 1em;
+    text-align-last: center;
+}
+
+.searchregion .wrap {
+    position: relative;
+}
+
+.searchregion .wrap::after {
+    content: '>';
+    font: 20px "Consolas", monospace;
+    color: yellow;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 35px;
+    top: 12px;
+    /* padding:0 0 2px; */
+    /* border-bottom:1px solid #ddd; */
+    position: absolute;
+    pointer-events: none;
+}
+
+.searchregion button {
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 1em;
+    font-size: 1.5em;
+    font-weight: 100;
+    height: 2em;
+    width: 12em;
 }
