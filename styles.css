@@ -350,9 +350,9 @@ p {
 .searchregion {
     display: flex;
     align-items: center;
-    height: 70%;
-    margin-bottom: 2%;
-    margin: auto;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 
 }
 
@@ -409,4 +409,10 @@ p {
     font-weight: 100;
     height: 2em;
     width: 12em;
+}
+
+@media only screen and (max-width: 850px) {
+    .searchregion {
+        flex-wrap: wrap;
+    }
 }
