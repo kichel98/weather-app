@@ -43,7 +43,7 @@ main {
     display: grid;
     grid-template: 1fr 2fr / 1fr 3fr;
     width: 100%;
-} 
+}
 
 .header {
     grid-area: 1 / 1 / 2 / 3;
@@ -215,7 +215,7 @@ main {
     -webkit-appearance: none;
     appearance: none;
     width: 1.2em;
-    height: 1.2em;   
+    height: 1.2em;
     border-radius: 50%;
     background: white;
 }
@@ -295,4 +295,30 @@ p {
     position: absolute;
     right: 14%;
     bottom: 0;
+}
+
+.hexa, .hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.hexa {
+  width: 325px;
+  height: 230px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+  display: inline-block;
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
 }
