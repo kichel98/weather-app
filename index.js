@@ -177,3 +177,39 @@ getForecastWeatherByCityName('London')
     .then(data => {
         showForecastTemperature(data);
     })
+
+/*------------- GRAF --------------- */
+var ctx = document.getElementById('myChart').getContext('2d');
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['', '', '', '', '', ''],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                // linear-gradient (to right, rgb(255, 3, 99), rgb(252, 245, 8));
+
+            ],
+            borderColor: [
+                // 'rgba(255, 99, 132, 1)',
+
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+
+
+/*------------- GRAF --------------- */
